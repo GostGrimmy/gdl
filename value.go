@@ -1,7 +1,7 @@
 package gdl
 
 import (
-	"go-develop-lib/util"
+	"github.com/GostGrimmy/gdl/util"
 )
 
 type GetInterface interface {

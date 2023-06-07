@@ -1,8 +1,8 @@
 package assert
 
 import (
+	"github.com/GostGrimmy/gdl/er"
 	"github.com/pkg/errors"
-	"go-develop-lib/er"
 )
 
 func Nil(err error, errorType er.ErrorType, msg string) {
