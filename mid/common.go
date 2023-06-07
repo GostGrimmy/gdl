@@ -1,8 +1,8 @@
 package mid
 
 import (
-	"gdl/assert"
-	"gdl/er"
+	"github.com/GostGrimmy/gdl/assert"
+	"github.com/GostGrimmy/gdl/er"
 	"github.com/gin-gonic/gin"
 )
 

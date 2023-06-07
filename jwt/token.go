@@ -2,9 +2,9 @@ package jwt
 
 import (
 	"crypto"
-	"gdl"
-	"gdl/assert"
-	"gdl/er"
+	"github.com/GostGrimmy/gdl"
+	"github.com/GostGrimmy/gdl/assert"
+	"github.com/GostGrimmy/gdl/er"
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/pkg/errors"
 	"strconv"

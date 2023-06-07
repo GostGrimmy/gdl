@@ -1,7 +1,7 @@
 package mid
 
 import (
-	"gdl/http"
+	"github.com/GostGrimmy/gdl/http"
 	"github.com/gin-gonic/gin"
 )
 
