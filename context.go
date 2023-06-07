@@ -18,7 +18,7 @@ func Ok(msg string, data any) *R {
 	return NewR(msg, true, data)
 }
 func OkWithMsg(data any) *R {
-	return Ok("成功", data)
+	return Ok("success", data)
 }
 func FailWithCode(code int, msg string) *R {
 	r := NewR(msg, false, nil)
@@ -26,5 +26,5 @@ func FailWithCode(code int, msg string) *R {
 	return r
 }
 func Fail(msg string) *R {
-	return NewR("失败", false, nil)
+	return NewR("fail", false, nil)
 }
