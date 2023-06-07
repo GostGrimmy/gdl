@@ -12,7 +12,7 @@ type App struct {
 }
 type EngineFunc func(engine *gin.Engine) error
 
-func (a App) Run() {
+func (a *App) Run() {
 	r := gin.New()
 	for _, engineFunc := range a.Before {
 		err := engineFunc(r)
@@ -21,6 +21,12 @@ func (a App) Run() {
 			return
 		}
 	}
+	if a.Host == "" {
+		a.Host = "localhost"
+	}
+	if a.Port == "" {
+		a.Port = "8080"
+	}
 	err := r.Run(fmt.Sprintf("%s:%s",
 		a.Host,
 		a.Port))
@@ -28,4 +34,7 @@ func (a App) Run() {
 		_ = fmt.Errorf("server run error , the err is %+v", err)
 		return
 	}
+}
+func (a *App) AddBefore(handlers ...EngineFunc) {
+	a.Before = handlers
 }
