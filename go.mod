@@ -1,4 +1,4 @@
-module gdl
+module github.com/GostGrimmy/gdl
 
 go 1.20
 
