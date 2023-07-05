@@ -2,7 +2,6 @@ package mid
 
 import (
 	"github.com/GostGrimmy/gdl/assert"
-	"github.com/GostGrimmy/gdl/er"
 	"github.com/gin-gonic/gin"
 )
 
@@ -33,7 +32,7 @@ func ParamBind[T any](key string, bindType BindType) gin.HandlerFunc {
 		case BindHeader:
 			err = c.ShouldBindHeader(bindData)
 		}
-		assert.Nil(err, er.ParamErrType, "")
+		assert.Nil(err, "请输入正确参数")
 		c.Set(key, bindData)
 	}
 }
